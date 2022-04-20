@@ -1,0 +1,52 @@
+[07-Apr-2022 16:48:19 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 25
+[07-Apr-2022 17:08:36 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 11
+[07-Apr-2022 17:29:07 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 30
+[07-Apr-2022 17:30:03 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 29
+[07-Apr-2022 17:30:05 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 29
+[07-Apr-2022 18:26:27 UTC] PHP Parse error:  syntax error, unexpected 'add_theme_support' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 16
+[07-Apr-2022 18:27:01 UTC] PHP Parse error:  syntax error, unexpected 'add_theme_support' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 16
+[07-Apr-2022 18:27:31 UTC] PHP Parse error:  syntax error, unexpected 'add_theme_support' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 16
+[07-Apr-2022 18:27:36 UTC] PHP Parse error:  syntax error, unexpected 'add_theme_support' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 16
+[08-Apr-2022 10:04:04 UTC] PHP Parse error:  syntax error, unexpected 'solution_enqueue_icon_styleshe' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 57
+[08-Apr-2022 10:04:06 UTC] PHP Parse error:  syntax error, unexpected 'solution_enqueue_icon_styleshe' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 57
+[08-Apr-2022 10:04:06 UTC] PHP Parse error:  syntax error, unexpected 'solution_enqueue_icon_styleshe' (T_STRING) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 57
+[08-Apr-2022 20:44:09 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 4
+[08-Apr-2022 20:44:32 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 4
+[11-Apr-2022 10:03:34 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\footer.php on line 30
+[11-Apr-2022 10:11:22 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\footer.php on line 26
+[11-Apr-2022 10:13:33 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\footer.php on line 26
+[11-Apr-2022 13:36:56 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 82
+[11-Apr-2022 14:11:01 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 98
+[11-Apr-2022 14:11:03 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 98
+[11-Apr-2022 15:55:29 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 88
+[12-Apr-2022 07:50:42 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 103
+[12-Apr-2022 07:51:48 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 93
+[12-Apr-2022 07:59:10 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 91
+[12-Apr-2022 08:12:02 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 98
+[12-Apr-2022 08:38:45 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 83
+[12-Apr-2022 08:38:52 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 85
+[12-Apr-2022 09:24:24 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 91
+[12-Apr-2022 09:26:35 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 109
+[12-Apr-2022 20:32:28 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 112
+[12-Apr-2022 20:51:21 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 89
+[12-Apr-2022 20:51:35 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 119
+[12-Apr-2022 21:19:40 UTC] PHP Parse error:  syntax error, unexpected '{' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 130
+[13-Apr-2022 13:04:59 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\templates\temoignages.php on line 51
+[13-Apr-2022 13:04:59 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\templates\temoignages.php on line 51
+[13-Apr-2022 13:05:08 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\templates\temoignages.php on line 51
+[13-Apr-2022 15:13:58 UTC] PHP Fatal error:  Cannot redeclare solutionTémoignages_register_post_types() (previously declared in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php:174) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 202
+[13-Apr-2022 15:13:58 UTC] PHP Stack trace:
+[13-Apr-2022 15:13:58 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\admin-ajax.php:0
+[13-Apr-2022 15:13:58 UTC] PHP   2. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\admin-ajax.php:22
+[13-Apr-2022 15:13:58 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-load.php:50
+[13-Apr-2022 15:13:58 UTC] PHP   4. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-config.php:91
+[13-Apr-2022 15:25:59 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 215
+[13-Apr-2022 15:31:40 UTC] PHP Parse error:  syntax error, unexpected '>' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 204
+[13-Apr-2022 15:35:21 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 222
+[13-Apr-2022 15:35:37 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 222
+[13-Apr-2022 15:36:10 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 222
+[13-Apr-2022 15:37:04 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 222
+[13-Apr-2022 15:40:57 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\functions.php on line 193
+[13-Apr-2022 15:43:33 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 203
+[13-Apr-2022 15:43:46 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 203
+[14-Apr-2022 21:53:25 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\footer.php on line 91

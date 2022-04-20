@@ -1,0 +1,398 @@
+/*
+Theme Name: Theme Solution
+Theme URI: https://solution.wp
+Author: Marie BLS
+Author URI: https://solution.fr
+Description: Theme Solution
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+body{
+    color : white !important;
+    background-color: black !important;
+    font-family: Montserrat, sans-serif;
+}
+
+/*-----------------------------------------------------------------------
+---------------------------- HEADER ----------------------------------
+------------------------------------------------------------------------*/
+
+ header{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+} 
+
+#logo{
+    position: absolute;
+    top :60px;
+    left: 30px;
+    z-index: 10;
+}
+
+.btn-buzz{
+    position: absolute;
+    top : 100px;
+    right: -50px;
+    transform: rotate(-90deg);
+}
+
+.btn-buzz a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-menu{
+    position:absolute;
+    top : 210px;
+    right: -22px;
+    transform: rotate(-90deg);
+}
+/*------------------------------------------------------------------------------
+/*----------------------MENUS-------------------------------------------------
+------------------------------------------------------------------------------*/
+
+.socialMenu{
+    position: absolute;
+    right : 130px;
+    top :60px;
+}
+
+.site__header__menu{
+    position:absolute;
+    top: 200px;
+}
+
+.site__footer__menu, .site__header__menu, .socialMenu {
+    list-style: none;
+    margin:0;
+    padding:0; /* pour annuler les paramètres par défaut de certains navigateurs*/
+}
+
+
+.socialMenu li a{
+padding: 10px;
+color : white;
+}
+
+.site__header__menu li a, .contact_footer a, .leg a{
+    color: #fff;
+    text-decoration: none;
+    padding :15px; 
+}
+
+.socialMenu li, .site__header__menu li{
+    display: inline-block;
+}
+
+/*-----------------------------------------------------------------------
+---------------------------- CARROUSEL ----------------------------------
+------------------------------------------------------------------------*/
+
+
+.carousel-indicators button{
+    height: 10px !important;
+    width: 10px !important;
+    margin: 0 10px !important;
+    border-radius: 100%;
+    background-color: white!important;
+}
+/*------------------------------------------------------------------------
+ --------------section qui encadre le corps du HTML ---------------------
+-------------------------------------------------------------------------*/
+
+
+section{
+    /* border : dashed 3px white; */
+    width: 1115px;
+    margin :auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------------------------------------------------------------
+/*----------------------------- CASE STUDY ------------------------------------
+-------------------------------------------------------------------------*/
+
+.case-study{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.case-study h1{
+    font-family: 'Ultra' !important;
+}
+
+/*------------------------------------------------------------------------
+/*-----------------------------BLOC PORTFOLIO --------------------------
+-------------------------------------------------------------------------*/
+
+.portfolio{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+    row-gap: 70px;
+    column-gap: 28px;
+}
+
+.portfolio div .image-portfolio{
+    align-items: center;
+}
+
+.portfolio div:nth-child(3){
+    grid-column: 1 /span 2; 
+}
+
+/*-------------------------------------------------------------------------
+/*--------------------------- BUTTONS CTA ---------------------------------
+--------------------------------------------------------------------------*/
+
+.btn-rea-white{
+    background-color: white;
+}
+
+.btn-rea-white, .btn-tem, .btn-primary, .btn-rea-orange {
+    margin: 30px 30px 30px 30px;
+    width : 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.btn-tem{
+    background-color: purple;
+}
+
+.btn-rea-white a, .btn-tem a, .btn-atout a{
+    text-decoration: none ;
+    color : black;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+
+
+
+/*-------------------------------------------------------------------------
+/*--------------------Le trait de séparation---------------------------------
+--------------------------------------------------------------------------*/
+.separateur{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+/*-----------------------------------------------------------------------------
+/*----------------- Le bloc "Vous avez trouvé la bonne agence..."--------------
+/*----------------- que j'ai appelé atouts ------------------------------------
+-----------------------------------------------------------------------------*/
+
+.atouts h1{
+    font-family: 'Ultra' ;
+    color: orangered;
+}
+
+.atouts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+    row-gap: 60px;
+    column-gap: 50px;
+    grid-template-areas:
+    "atout1content atout1img"
+    "atout2img atout2content"
+    "atout3content  atout3img";
+}
+
+ .content-atout1{
+    grid-area: atout1content;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ .image-atout1{
+    grid-area: atout1img;
+    margin: auto;
+    display: flex;
+}
+
+.image-atout2  {
+    grid-area : atout2img;
+    align-self: center;
+}
+
+.btn-atout{
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 200px;
+    height: 60px;
+}
+
+.content-atout2 {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.content-atout3{
+    grid-area: atout3content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.image-atout3{
+    grid-area : atout3img;
+   align-self: center;
+}
+/*------------------------------------------------------------------------------
+/*--------------------------- BLOC TEMOIGNAGES -----------------------------
+------------------------------------------------------------------------------*/
+
+.temoignages h1{
+    color : purple;
+    font-family: 'Ultra';
+}
+
+.temoignages{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: auto;
+    row-gap : 70px;
+    column-gap: 90px;    
+}
+
+/*------------------------------------------------------------------------------
+/*------------------ "Ce qui nous rend différents" -----------------------------
+------------------------------------------------------------------------------*/
+
+.diff{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.diff *{
+    justify-items: space-around;
+    align-items: center;
+    padding:10px 10px 10px 10px ;
+    text-align: center;
+}
+
+.diff h1{
+    color: orange;
+    font-family: 'Ultra';
+    font-size: 60px;
+    width : 80%;
+}
+
+/*------------------------------------------------------------------------------
+/*----------------------- Le bloc des 4 cartes  --------------------------------
+/*----------------------- que j'ai appelé Cards --------------------------------
+/*----------------------- réalisé en partie avec Bootstrap------------------------
+------------------------------------------------------------------------------*/
+.cards{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.btn-card{
+    width : 200px;
+    height: 60px;
+    background-color: orangered;
+    border :  none ;
+    color : black;
+}
+
+.foot{
+    display: flex;   
+    /* justify-content: left; */
+    align-items: center;
+    justify-content: center;
+    width : 250px;
+    height: 60px;
+}
+
+
+.btn-primary{
+    border : 0;
+    border-radius: 0;
+    color : black;
+    font-family: Montserrat;
+    font-weight: bold;
+    background-color: orange;
+    margin-left:16px ;
+}
+
+
+/*------------------------------------------------------------------------
+/*----------------------------- Actus ------------------------------------
+-------------------------------------------------------------------------*/
+
+.actus{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.actus h1{
+    font-family: 'Ultra' !important;
+    color: red ;
+}
+
+/*------------------------------------------------------------------------------
+/*----------------------- FOOTER ------------------------------------------------
+------------------------------------------------------------------------------*/
+
+.footer{
+    color:white;
+    padding: 20px 130px 20px 130px ;
+}
+
+#menu-footer {
+    display: grid;
+    grid-column: 1 ;
+    grid-row:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#menu-footer li a{
+    text-align: left;
+}
+#menu-footer li{
+    margin :4px
+}
+.contact{
+    text-align: right;
+}
+#logo-footer{
+    text-align: center;
+} 
+#logoblack{
+    width : 70px;
+}
+
+/* mentions légales*/
+.legales a, .nav_footer a{
+    text-decoration: none ;
+    color: white;
+}
