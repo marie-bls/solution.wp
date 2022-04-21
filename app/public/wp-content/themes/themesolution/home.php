@@ -1,1 +1,0 @@
-<!--cette page est la page d'accueil du blog -->
