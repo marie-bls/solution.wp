@@ -9,6 +9,8 @@
     <!-- utilisation de balise meta pour que le contenu s'adapte à la fenêtre d'affichage-->
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    
     <?php wp_head(); ?>
     <!-- par cette fonction, WP, le thème et les extensions vont déclarer le chargement des scripts et des styles -->
 </head>

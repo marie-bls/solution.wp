@@ -39,7 +39,8 @@
                     </div>
 
                     <div class="titre-portfolio">
-                        <?php the_title(); ?>
+                        <h5 class="text-uppercase" ><?php the_title(); ?> /  </h5>
+                        <p> <?php the_excerpt();?></p>
                     </div>
                 </div>
 
@@ -240,7 +241,7 @@
                                             
                     </div>     
                     
-                    <div class="foot">
+                    <div class="foot-card">
                         <a href="<?php echo get_permalink(); ?>" class="btn btn-primary">NOS TEMOIGNAGES</a>
                     </div>
                                                     
@@ -258,8 +259,99 @@
     <div class="actus">
         <h1>Actus</h1>
     </div>
-    
+<!---------------------------------------------------------------------------------------->
+<!------------------------------ WP QUERY BLOC "ACTUS""---------------------------------->
+<!---------------------------------------------------------------------------------------->
+
+<div class="bloc-actus card-group">
+    <?php
+        $actus = new WP_Query();
+        $actus->query('showposts=3');
+    ?>
+    <?php while ($actus->have_posts()) : $actus->the_post(); ?>
+
+        <div class="card text-white bg-black" >
+
+            <div class="card-img-top">
+                <?php the_post_thumbnail('miniature'); ?> 
+            </div>
+            
+
+            <div class="card-body content-actu">
+                <p class="text-danger"><?php the_time(get_option('date_format'));?></p>
+                <h5 class ="card-title titre-actu"><?php the_title();?> </h5>
+                <p class="card-text">
+                <?php the_content();?>
+            </p> 
+            </div>
+        
+            <div class ="lien-actu">
+                <h6 class="font-weight-bold"> <a href="<?php the_permalink() ?>">LIRE + </a></h6>
+            </div>
+
+        </div>
+        
+            
+    <?php endwhile; ?>
+
+</div>
+
 </section>
+
+<!---------------------------------------------------------------------------------------->
+<!------------------------------ LE SLIDER LOGO CLIENTS---------------------------------->
+<!---------------------------------------------------------------------------------------->
+<?php
+    $args = array(
+        'post_type' => 'slider-item',
+        'showposts' => -1, //permet d'avoir tous les logos
+        'order' => 'DESC',
+    );
+
+    $my_query = new WP_Query($args);
+    $count = 0; ?>
+
+
+    
+    <div id="carouselDark" class="carousel carousel slide slider-logos" data-bs-ride="carousel">
+
+        <?php if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                $count++; ?>
+        
+            <div class="carousel-inner">
+
+            <?php
+            if ($count >=1 && $count <=5) { ?>
+
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="<?php the_field('logo_client');?>" alt="" class="d-block w-100">
+                </div>
+
+            <?php 
+            } 
+            else if 
+            ($count >5 && $count <= 10)
+            {?>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="<?php the_field('logo_client');?>" alt="" class="d-block w-100">
+                </div>
+
+            <?php } ?>
+                
+            </div>
+
+
+        <?php endwhile;
+        endif;
+        wp_reset_postdata(); ?>
+
+    </div>
+
+
+<!------------------------------------------------------------------------------------------>
+    
+
 
 
     <?php

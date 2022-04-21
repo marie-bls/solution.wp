@@ -15,6 +15,8 @@ add_action('after_setup_theme', 'solutiontheme_supports');
 function solution_new_image(){
     add_image_size('square', 540, 540, false);
     add_image_size('landscape', 2000, 800, true);
+    add_image_size('miniature', 350, 350, true);
+
     // Définir la taille des images mises en avant
     set_post_thumbnail_size(400, 400, true);
 }
@@ -90,6 +92,16 @@ function solution_register_assets()
 
 add_action('wp_enqueue_scripts', 'solution_register_assets');
 
+
+// add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_assets' );
+
+// function my_theme_enqueue_assets() {
+// 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick.css', array(), '1.5.7' );
+// 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick-theme.css', array(), '1.5.7' );
+
+// 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick.js', array(), '1.5.7', true );
+// }
+
 //---------------------------------------------------------------------
 // ----------------------Déclarer les CPT------------------------------
 //--------------------------------------------------------------------
@@ -117,25 +129,12 @@ function solutionPortfolio_register_post_types()
         'supports' => array('author','title','editor','thumbnail','excerpt'), // champs affichés dans l'interface d'admin
         'menu_icon' => 'dashicons-screenoptions',
         'rewrite' => array( 'slug' => "realisations" ), // Réecriture de l'URL
+        'taxonomies' => array('category', 'post_tag'),
+
     );
 
     register_post_type('portfolio-item', $args);
     // Déclaration de la taxonomie à réaliser dans celle du CPT
-
-    $labels = array(
-        'name' => 'Type de réalisations',
-        'new_item_name' => 'Nom de la nouvelle réalisation',
-        'parent_item' => 'Type de projet parent',
-    );
-
-    $args = array(
-        'labels' => $labels,
-        'public' => true, //taxonomie visible sur le site
-        'show_in_rest' => true, // taxonomie visible dans l'éditeur visuel (Gutemberg)
-        'hierarchical' => true, //type de comportement : comme étiquette ou volatile?
-    );
-
-    register_taxonomy('type-rea', 'portfolio', $args); //1er param le slug, le 2d : CPT, le 3e les args
 
 }
 add_action('init', 'solutionPortfolio_register_post_types');
@@ -228,8 +227,33 @@ function solutionTémoignages_register_post_types()
 add_action('init', 'solutionTémoignages_register_post_types');
 
 
+// ----------------------- ** SLIDER CLLIENTS ** -----------------------
 
+function solutionSlider_register_post_types()
+{ //fonction qui prend plusieurs param
+    //ici la déclaration 
+    $labels = array( // éléments qui apparaîtront dans l'administration de WP
+        'name' => 'Slider Clients',
+        'all_items' => 'Logos',  // élément affiché dans le sous menu
+        'singular_name' => 'Logo', //définir le nom au pluriel et singulier
+        'add_new_item' => 'Ajouter un logo',
+        'edit_item' => 'Modifier',
+        'menu_name' => 'Slider Cients'
+    );
 
+    $args = array(
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-slides',
+        'public' => true, //dans le cas d'un thème la visibilité du CPT sera forcément publique pour être affiché
+        'show_in_rest' => false,
+        // Pour créer un CPT avec l’éditeur visuel Gutenberg, il faut ajouter le paramètre show_in_rest à true dans sa déclaration
+        'has_archive' => false, // est ce qu'on veut que le portfolio se comporte comme une archive (avec des single)
+    );
+
+    register_post_type('slider-item', $args);
+
+}
+add_action('init', 'solutionSlider_register_post_types');
 //----------------------------------------------------------------------
 // --------------- Bibliothèques d'icînes Font Awesome -----------------
 //----------------------------------------------------------------------

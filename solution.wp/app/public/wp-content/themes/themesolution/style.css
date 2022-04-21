@@ -149,6 +149,17 @@ section{
     grid-column: 1 /span 2; 
 }
 
+.titre-portfolio{
+    display: inline-flex;
+    align-items: baseline;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.titre-portfolio h5{
+    font-weight: bold;
+}
+
 /*-------------------------------------------------------------------------
 /*--------------------------- BUTTONS CTA ---------------------------------
 --------------------------------------------------------------------------*/
@@ -185,6 +196,7 @@ section{
 --------------------------------------------------------------------------*/
 .separateur{
     margin-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
     height: 1px;
     background-color: #fff;
@@ -241,11 +253,6 @@ section{
     height: 60px;
 }
 
-.content-atout2 {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-}
 
 .content-atout3{
     grid-area: atout3content;
@@ -322,7 +329,7 @@ section{
     color : black;
 }
 
-.foot{
+.foot-card{
     display: flex;   
     /* justify-content: left; */
     align-items: center;
@@ -356,6 +363,48 @@ section{
 .actus h1{
     font-family: 'Ultra' !important;
     color: red ;
+}
+
+.bloc-actus{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.titre-actu{
+    color: red;
+    font-style: bold ;
+    text-transform: uppercase;
+}
+
+.content-actu{
+    padding :16px 20px 16px 0px;
+    margin-left: 0;
+}
+
+.lien-actu a{
+    color:white;
+    font-weight: bold;
+}
+
+.lien-actu{
+    margin-bottom: 50px;
+}
+
+
+/*------------------------------------------------------------------------------
+/*----------------------- SLIDER LOGOS CLIENTS ------------------------------------------------
+------------------------------------------------------------------------------*/
+.slider-logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    width: 100%;
+    margin:auto;
 }
 
 /*------------------------------------------------------------------------------

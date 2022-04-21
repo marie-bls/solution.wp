@@ -50,3 +50,14 @@
 [13-Apr-2022 15:43:33 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 203
 [13-Apr-2022 15:43:46 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 203
 [14-Apr-2022 21:53:25 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\footer.php on line 91
+[20-Apr-2022 15:11:19 UTC] PHP Parse error:  syntax error, unexpected '?>' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 317
+[20-Apr-2022 15:53:51 UTC] PHP Parse error:  syntax error, unexpected '<=' (T_IS_SMALLER_OR_EQUAL) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 326
+[21-Apr-2022 09:54:51 UTC] PHP Warning:  Use of undefined constant SECURE_AUTH_KEY - assumed 'SECURE_AUTH_KEY' (this will throw an Error in a future version of PHP) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\wp-slick-slider-and-image-carousel\wpos-analytics\includes\wpos-anylc-function.php on line 67
+[21-Apr-2022 09:54:51 UTC] PHP Stack trace:
+[21-Apr-2022 09:54:51 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\admin.php:0
+[21-Apr-2022 09:54:51 UTC] PHP   2. do_action() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\admin.php:259
+[21-Apr-2022 09:54:51 UTC] PHP   3. WP_Hook->do_action() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\plugin.php:474
+[21-Apr-2022 09:54:51 UTC] PHP   4. WP_Hook->apply_filters() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\class-wp-hook.php:331
+[21-Apr-2022 09:54:51 UTC] PHP   5. Wpos_Anylc_Admin->wpos_anylc_page_html() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\class-wp-hook.php:307
+[21-Apr-2022 09:54:51 UTC] PHP   6. wpos_anylc_optin_data() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\wp-slick-slider-and-image-carousel\wpos-analytics\includes\class-anylc-admin.php:161
+[21-Apr-2022 09:54:51 UTC] PHP   7. wpos_anylc_site_uid() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\wp-slick-slider-and-image-carousel\wpos-analytics\includes\wpos-anylc-function.php:150

@@ -1,5 +1,3 @@
-<!-- c'est ce fichier qui s'affichera lorsque la page d'accueil sera appelée -->
-
 <?php get_header(); ?>
 <h1>PORTFOLIO</h1>
 
