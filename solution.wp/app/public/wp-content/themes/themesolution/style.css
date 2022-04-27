@@ -12,6 +12,8 @@ body{
     color : white !important;
     background-color: black !important;
     font-family: Montserrat, sans-serif;
+    max-width: 1800px !important; /*pour limiter la largeur*/
+    margin : auto;
 }
 
 /*-----------------------------------------------------------------------
@@ -20,15 +22,16 @@ body{
 
  header{
     width: 100% !important;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items : center;
 } 
 
 #logo{
-    position: absolute;
-    top :60px;
-    left: 30px;
+    position: absolute ;
+    top :50px;
+    left: 400px;
     z-index: 10;
 }
 
@@ -56,8 +59,8 @@ body{
 
 .socialMenu{
     position: absolute;
-    right : 130px;
-    top :60px;
+    right : 400px;
+    top :50px;
 }
 
 .site__header__menu{
@@ -69,12 +72,13 @@ body{
     list-style: none;
     margin:0;
     padding:0; /* pour annuler les paramètres par défaut de certains navigateurs*/
+    display: flex;
 }
 
 
 .socialMenu li a{
-padding: 10px;
-color : white;
+    padding: 10px;
+    color : white;
 }
 
 .site__header__menu li a, .contact_footer a, .leg a{
@@ -93,11 +97,11 @@ color : white;
 
 
 .carousel-indicators button{
-    height: 10px !important;
-    width: 10px !important;
-    margin: 0 10px !important;
-    border-radius: 100%;
-    background-color: white!important;
+height: 10v !important;
+width: 10px !important;
+margin: 0 10px !important;
+border-radius: 100%;
+background-color: white!important;
 }
 /*------------------------------------------------------------------------
  --------------section qui encadre le corps du HTML ---------------------
@@ -105,8 +109,8 @@ color : white;
 
 
 section{
-    /* border : dashed 3px white; */
-    width: 1115px;
+    /* width: 1115px; */
+    width: 80vh;
     margin :auto;
     display: flex;
     flex-direction: column;
@@ -124,7 +128,7 @@ section{
 }
 
 .case-study h1{
-    font-family: 'Ultra' !important;
+    font-family: 'Ultra', sans-serif  !important;
 }
 
 /*------------------------------------------------------------------------
@@ -181,15 +185,14 @@ section{
     background-color: purple;
 }
 
-.btn-rea-white a, .btn-tem a, .btn-atout a{
+.btn-rea-white a, .btn-tem a, .btn-atout a, .btn-primary{
     text-decoration: none ;
     color : black;
-    font-family: Montserrat;
+    font-family: Montserrat ;
     font-weight: bold;
+    text-transform: uppercase;
+
 }
-
-
-
 
 /*-------------------------------------------------------------------------
 /*--------------------Le trait de séparation---------------------------------
@@ -207,42 +210,64 @@ section{
 /*----------------- que j'ai appelé atouts ------------------------------------
 -----------------------------------------------------------------------------*/
 
-.atouts h1{
+.container h1{
     font-family: 'Ultra' ;
     color: orangered;
 }
 
-.atouts{
+
+/* .atouts{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin: auto;
     row-gap: 60px;
     column-gap: 50px;
-    grid-template-areas:
-    "atout1content atout1img"
-    "atout2img atout2content"
-    "atout3content  atout3img";
-}
+} */
 
- .content-atout1{
-    grid-area: atout1content;
-    margin-top:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
- .image-atout1{
-    grid-area: atout1img;
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     margin: auto;
-    display: flex;
+    row-gap: 60px;
+    column-gap: 50px;
+    grid-template-areas:
+    "atout1"
+    "atout2"
+    "atout3";
 }
 
-.image-atout2  {
-    grid-area : atout2img;
-    align-self: center;
+.content-atout{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
+
+.content-atout:first-child{
+    grid-area: atout1;
+}
+
+.content-atout:nth-child(2){
+    grid-area: atout2;
+}
+
+.content-atout:nth-child(3){
+    grid-area: atout3;
+}
+
+.odd.content-atout .txt-atout{
+    order :1;     
+}
+
+.odd.content-atout .image-atout{
+    order :2; 
+    margin: auto;
+}
+
+.even.content-atout .txt-atout{
+    order: 2
+}
+
 
 .btn-atout{
     background-color: orangered;
@@ -254,16 +279,6 @@ section{
 }
 
 
-.content-atout3{
-    grid-area: atout3content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.image-atout3{
-    grid-area : atout3img;
-   align-self: center;
-}
 /*------------------------------------------------------------------------------
 /*--------------------------- BLOC TEMOIGNAGES -----------------------------
 ------------------------------------------------------------------------------*/
@@ -305,7 +320,7 @@ section{
 
 .diff h1{
     color: orange;
-    font-family: 'Ultra';
+    font-family: 'Ultra', sans serif;
     font-size: 60px;
     width : 80%;
 }
@@ -343,7 +358,7 @@ section{
     border : 0;
     border-radius: 0;
     color : black;
-    font-family: Montserrat;
+    font-family: Montserrat, serif ;
     font-weight: bold;
     background-color: orange;
     margin-left:16px ;
@@ -372,6 +387,7 @@ section{
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: auto;
+    /*justify-self : center;*/
 }
 
 .titre-actu{
@@ -444,4 +460,14 @@ section{
 .legales a, .nav_footer a{
     text-decoration: none ;
     color: white;
+}
+
+.menu-contact{
+    font-size : 0;
+}
+
+.menu-contact:before{
+    content : "\f0e0"; /*font awesome*/
+    font-family :"fontawesome";
+    font-size:20px;
 }

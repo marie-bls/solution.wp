@@ -1,13 +1,13 @@
 <?php get_header(); ?>
-<h1>PORTFOLIO</h1>
+<h1><?php echo __("realisations","agence la solution");?></h1> <!--pour outil de traduction-->
 
-<h1 class="site__heading"><?php post_type_archive_title(); ?></h1> <!-- va afficher « PortFolio » en titre <h1>.-->
+
 
 <main class="site__portfolio">
     <!--modif de la classe CSS pour changer de style sur le portfolio-->
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <!--boucle Wordpress comme pour single -->
-            <div class="project">
+            <div class="project col-4">
                 <h2 class="project__title">
                     <a href="<?php the_permalink(); ?>">
                         <?php the_title(); ?>

@@ -64,43 +64,48 @@ register_nav_menus(array(
 //-------------------------------------------------------------------
 
 // à l’aide des fonctions wp_enqueue_style() et wp_enqueue_script(), WP sait qu'il doit charger les styles et scripts 
-// il les ajoutent à une file d'attente de ressources et créera les balises <link> et <script> correspondantes sur wp_head ou wp_footer
+// il les ajoute à une file d'attente de ressources et créera les balises <link> et <script> correspondantes sur wp_head ou wp_footer
 
 function solution_register_assets()
 {
-    // Déclarer jQuery
-    wp_enqueue_script('jquery');
-
-    // Déclarer le JS
-    wp_enqueue_script(
+     // Déclarer le JS
+     wp_enqueue_script(
         'solution', // 1er paramètre, le handle, généralement le nom du fichier (nom du thème)
         get_template_directory_uri() . '/js/script.js',
-        array('jquery'), //ce tableau de dépendance permet de lister le handle des scripts qui devront être chargés avant
-        '1.0',
+        array('jquery', 'bootstrap-js','slick'), //ce tableau de dépendance permet de lister le handle des scripts qui devront être chargés avant
+        '1.0', // le script js sera chargé après jquery et bootstrap-js
         true // ce booléen indique que le script sera chargé en bas de page (si true) via le wp_footer )> meilleures perfo
     );
 
-  // Déclarer le fichier style.css à la racine du thème
-  wp_enqueue_style(  //la fonction wp_enqueue_style() inscrit un fichier CSS à afficher dans la page
+    // Déclarer le CSS 
+    wp_enqueue_style(  //la fonction wp_enqueue_style() prend 4 paramètres ; elle inscrit un fichier CSS à afficher dans la page
+        'style',// le nom du fichier
+        get_stylesheet_uri(), // son url si style.css est à la racine du thème
+        array(),
+        '1.0' //le versionning 
+        );
 
-    'style',
-    get_stylesheet_uri(), // si style.css est à la racine du thème
-    array(),
-    '1.0'
-);
+    // Déclarer jQuery et Slick
+    wp_enqueue_script('jquery');
+   
+    // Déclarer Slick
+    // wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/src/library/css/slick.css', [], false, 'all' );
+    // wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/src/library/css/slick-theme.css', ['slick-css'], false, 'all' );
+    // wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/src/library/js/slick.min.js', ['jquery'], false, true );
+    // wp_enqueue_script( 'carousel-js', get_template_directory_uri()  . '/assets/src/carousel/index.js', ['jquery', 'slick-js'], get_template_directory() . '/assets/src/carousel/index.js', true );
+   
+    // wp_enqueue_scripts('slick-css');
+    // wp_enqueue_scripts('slick-theme-css');
+    // wp_enqueue_scripts('slick-js');
+    // wp_enqueue_scripts('carousel-js');
+
+    // enregistrement des google fonts
+    wp_enqueue_style('$fontstyle', 'https://fonts.googleapis.com/css2?family=Ultra&display=swap&family=Montserrat&display=swap', array(), null, 'all');
+   
 }
-
 add_action('wp_enqueue_scripts', 'solution_register_assets');
+    
 
-
-// add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_assets' );
-
-// function my_theme_enqueue_assets() {
-// 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick.css', array(), '1.5.7' );
-// 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick-theme.css', array(), '1.5.7' );
-
-// 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/plugins/slick-1.8.1/slick/slick.js', array(), '1.5.7', true );
-// }
 
 //---------------------------------------------------------------------
 // ----------------------Déclarer les CPT------------------------------
@@ -227,7 +232,7 @@ function solutionTémoignages_register_post_types()
 add_action('init', 'solutionTémoignages_register_post_types');
 
 
-// ----------------------- ** SLIDER CLLIENTS ** -----------------------
+// ----------------------- ** SLIDER CLIENTS ** -----------------------
 
 function solutionSlider_register_post_types()
 { //fonction qui prend plusieurs param
@@ -254,6 +259,37 @@ function solutionSlider_register_post_types()
 
 }
 add_action('init', 'solutionSlider_register_post_types');
+
+// ----------------------- ** CARROUSEL EN-TETE ** -----------------------
+
+function solutionCarrousel_register_post_types()
+{ //fonction qui prend plusieurs param
+    //ici la déclaration 
+    $labels = array( // éléments qui apparaîtront dans l'administration de WP
+        'name' => 'Carrousel',
+        'all_items' => 'Images',  // élément affiché dans le sous menu
+        'singular_name' => 'Image', //définir le nom au pluriel et singulier
+        'add_new_item' => 'Ajouter une image',
+        'edit_item' => 'Modifier',
+        'menu_name' => 'Carrousel'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-welcome-view-site',
+        'public' => true, //dans le cas d'un thème la visibilité du CPT sera forcément publique pour être affiché
+        'show_in_rest' => false,
+        // Pour créer un CPT avec l’éditeur visuel Gutenberg, il faut ajouter le paramètre show_in_rest à true dans sa déclaration
+        'has_archive' => false, // est ce qu'on veut que le portfolio se comporte comme une archive (avec des single)
+    );
+
+    register_post_type('carrousel', $args);
+
+}
+add_action('init', 'solutionCarrousel_register_post_types');
+
+
+
 //----------------------------------------------------------------------
 // --------------- Bibliothèques d'icînes Font Awesome -----------------
 //----------------------------------------------------------------------

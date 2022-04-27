@@ -58,11 +58,9 @@
 
                 <!-- Mentions légales -->
                 <div class="legales text-center p-4" >
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+                    
                     <a href=" <?php echo get_permalink(3); ?>"><?php echo get_the_title(3); ?></a>
 
-                    <?php endwhile;endif?>
                 </div>
                 <!-- Copyright -->
             </footer>
