@@ -154,7 +154,7 @@ get_header(); ?>
     </div>
 
     <div class="btn-tem">
-        <a href="<?php echo get_permalink(7605); //redirection avec fonction native de WP qui récupère l'id de la page visée ?>">NOS TEMOIGNAGES</a> <
+        <a href="<?php echo get_permalink(7605); //redirection avec fonction native de WP qui récupère l'id de la page visée ?>">NOS TEMOIGNAGES</a> 
     </div>
 
     

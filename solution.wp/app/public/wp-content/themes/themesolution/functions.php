@@ -31,8 +31,8 @@ add_theme_support('title-tag');
 //--------------------------------------------------------------------
 
 function charger_bootstrap() {
-    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js');
-    // , array( 'jquery' ), null, true );
+    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js'
+    ,array( 'jquery' ), null, true );
 
     wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');    
 }
@@ -70,10 +70,11 @@ function solution_register_assets()
 {
      // Déclarer le JS
      wp_enqueue_script(
-        'solution', // 1er paramètre, le handle, généralement le nom du fichier (nom du thème)
-        get_template_directory_uri() . '/js/script.js',
-        array('jquery', 'bootstrap-js','slick'), //ce tableau de dépendance permet de lister le handle des scripts qui devront être chargés avant
-        '1.0', // le script js sera chargé après jquery et bootstrap-js
+        'script', // 1er paramètre, le handle, généralement le nom du fichier (nom du thème)
+        get_template_directory_uri() .'/script.js',
+        array('jquery', 'bootstrap-js'), //ce tableau de dépendance permet de lister le handle des scripts qui devront être chargés avant
+        // le script js sera chargé après jquery et bootstrap-js
+        time(),
         true // ce booléen indique que le script sera chargé en bas de page (si true) via le wp_footer )> meilleures perfo
     );
 
@@ -82,30 +83,70 @@ function solution_register_assets()
         'style',// le nom du fichier
         get_stylesheet_uri(), // son url si style.css est à la racine du thème
         array(),
-        '1.0' //le versionning 
+        time() //le versionning. Ici en dév, time() évite les soucis de cache, et le n° de version changera automatiquement
         );
 
-    // Déclarer jQuery et Slick
+    // Déclarer jQuery 
     wp_enqueue_script('jquery');
-   
-    // Déclarer Slick
-    // wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/src/library/css/slick.css', [], false, 'all' );
-    // wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/src/library/css/slick-theme.css', ['slick-css'], false, 'all' );
-    // wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/src/library/js/slick.min.js', ['jquery'], false, true );
-    // wp_enqueue_script( 'carousel-js', get_template_directory_uri()  . '/assets/src/carousel/index.js', ['jquery', 'slick-js'], get_template_directory() . '/assets/src/carousel/index.js', true );
-   
-    // wp_enqueue_scripts('slick-css');
-    // wp_enqueue_scripts('slick-theme-css');
-    // wp_enqueue_scripts('slick-js');
-    // wp_enqueue_scripts('carousel-js');
 
-    // enregistrement des google fonts
-    wp_enqueue_style('$fontstyle', 'https://fonts.googleapis.com/css2?family=Ultra&display=swap&family=Montserrat&display=swap', array(), null, 'all');
-   
+
+
 }
-add_action('wp_enqueue_scripts', 'solution_register_assets');
-    
+    add_action('wp_enqueue_scripts', 'solution_register_assets');
 
+//-------------------------------------------SLICK CAROUSEL---------------------------------------------
+/**
+ * Déclarer les short codes
+ */
+add_action( 'init', 'register_shortcodes' );
+function register_shortcodes() { // lorsque ces codes seront trouvés, les fonctions seront appelées
+	add_shortcode( 'post_slick_carousel_slider', 'sc_post_slick_carousel_slider' );
+}
+
+/**
+ * "post_slick_carousel_slider" est une fonction de rappel de code court responsable de la sortie du balisage HTML des custom posts
+ */
+function sc_post_slick_carousel_slider ( $atts ) {
+
+  global $wp_query, $post;
+
+  $posts = new WP_Query( array(
+    'post_type' => 'carrousel', 
+    'post_status' => 'publish',  
+    'showposts'=> -1
+	) );
+
+  if( ! $posts->have_posts() ) {
+		return false;
+  }
+
+  $output = '<div class="post-slick-carousel-slider">';
+
+  while( $posts->have_posts() ) {
+
+        $posts->the_post();	
+        $post_ID = get_the_ID();	
+        $post_image=wp_get_attachment_image( get_post_thumbnail_id( $post_ID ), 'landscape', false, '' );
+        //get_attachment image génèrera une img en HTML, elle a besoin de l'id en argument
+
+		$output .= '<div>';        
+		$output .= 		$post_image;
+		$output .= '</div>';		
+		// $posts->the_post();
+        // $post_title=get_the_title();
+        // $post_image = get_the_post_thumbnail( 'landscape');
+ 
+
+		// $output .= '<div class ="carrousel-item">'; 
+        // $output .=      $post_title;	
+		// $output .=      '<img src ="'. $post_image.'"></img>' ;
+		// $output .= '</div>';
+	}
+
+    $output .= '</div>';
+
+  return $output;
+}
 
 //---------------------------------------------------------------------
 // ----------------------Déclarer les CPT------------------------------
@@ -277,6 +318,7 @@ function solutionCarrousel_register_post_types()
     $args = array(
         'labels' => $labels,
         'menu_icon' => 'dashicons-welcome-view-site',
+        'supports' => array('title','thumbnail'),
         'public' => true, //dans le cas d'un thème la visibilité du CPT sera forcément publique pour être affiché
         'show_in_rest' => false,
         // Pour créer un CPT avec l’éditeur visuel Gutenberg, il faut ajouter le paramètre show_in_rest à true dans sa déclaration
@@ -285,6 +327,8 @@ function solutionCarrousel_register_post_types()
 
     register_post_type('carrousel', $args);
 
+     // enregistrement des google fonts
+     wp_enqueue_style('$fontstyle', 'https://fonts.googleapis.com/css2?family=Ultra&display=swap&family=Montserrat&display=swap', array(), null, 'all');
 }
 add_action('init', 'solutionCarrousel_register_post_types');
 

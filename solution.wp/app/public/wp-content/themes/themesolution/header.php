@@ -19,6 +19,7 @@
 
 
     <header class="header">
+
         <!------------------------------------ logo cliquable-------------------------------------------------------->
 
         <a id="logo" href="<?php echo home_url('/'); ?>">
@@ -26,29 +27,38 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
             <!-- get_template_directory_uri() permet d’obtenir l’adresse absolue (c’est-à-dire complète) du logo -->
         </a>
+        <!--------------------------------------- Carroussel---------------------------------------------------->
 
-        <!-------------------------------------- CARROUSEL ---------------------------------------------------------->
+        
+        <?php // je mets dans une variable un tableau récupérant tous mes custom post carrousel
+         $slider = get_posts(array('post_type' => 'carrousel', 'showposts'   => -1)); ?>
 
-
+        <!--container du slider-->
         <div id="carouselDark" class="carousel carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/header1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/header2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/header3.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-        </div>
 
+        <!--contenu du slider -->
+            <div class="carousel-inner">
+        
+                <?php 
+                    $count = 0;
+                    foreach($slider as $slide): // je parcours mon tableau            
+                    ?>
+
+                        <div class="carousel-item <?php echo ($count == 0) ? 'active' : '';
+                        //si mon index est à 0, donc 1ere slide, il prendra la classe 'active' nécessaire à Bootstrap ?> " data-bs-interval="5000">
+                            <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($slide->ID)) ?>" class="img-responsive"/>
+                        </div>
+                        <?php $count++; ?>
+         
+                    <?php endforeach; ?>
+            </div>
+
+        </div>
 
 
 <!-------------------------------------- bouton buzzwatch ---------------------------------------------------------->

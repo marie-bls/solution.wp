@@ -3,7 +3,7 @@
       
 
             <!-- Footer -->
-            <footer class="footer text-center bg-dark">
+            <footer class="footer text-center">
                 <!-- Section: Social media -->
                
                 <!-- Section: Links  -->
@@ -40,14 +40,13 @@
                             <div class="col-md-4 contact">
                                 <!-- Links -->
                                 <h6 class="text-uppercase fw-bold mb-4">
-                                    Contact
+                                    CONTACT
                                 </h6>
-                                <p><i class="me-3"></i> Adresse</p>
-                                <p>
-                                    <i class="me-3"></i>
-                                    info@example.com
-                                </p>
-                                <p><i class="me-3"></i> + 01 234 567 88</p>
+                                <p><i class="me-3"></i> 1, rond-point de Flotis</p>
+                                <p><i class="me-3"></i> Bâtiment 1, 1er étage</p>
+                                <p><i class="me-3"></i> 31240 SAINT JEAN</p>
+
+                                <p><i class="me-3"></i> 05 67 20 20 00</p>
                             </div>
                             <!-- Grid column -->
                         </div>

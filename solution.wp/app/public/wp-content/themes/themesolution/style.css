@@ -11,7 +11,7 @@ Version: 1.0
 body{
     color : white !important;
     background-color: black !important;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, sans-serif !important;
     max-width: 1800px !important; /*pour limiter la largeur*/
     margin : auto;
 }
@@ -109,8 +109,7 @@ background-color: white!important;
 
 
 section{
-    /* width: 1115px; */
-    width: 80vh;
+    width: 1115px;
     margin :auto;
     display: flex;
     flex-direction: column;
@@ -224,18 +223,8 @@ section{
     row-gap: 60px;
     column-gap: 50px;
 } */
+/* 
 
-.container{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin: auto;
-    row-gap: 60px;
-    column-gap: 50px;
-    grid-template-areas:
-    "atout1"
-    "atout2"
-    "atout3";
-}
 
 .content-atout{
     display: flex;
@@ -428,7 +417,7 @@ section{
 ------------------------------------------------------------------------------*/
 
 .footer{
-    color:white;
+    background-color: grey;
     padding: 20px 130px 20px 130px ;
 }
 
