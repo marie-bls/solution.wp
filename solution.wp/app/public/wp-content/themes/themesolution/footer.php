@@ -8,7 +8,7 @@
                
                 <!-- Section: Links  -->
                 <div class="">
-                    <div class="container text-center text-md-start mt-5">
+                    <div class="container-footer text-center text-md-start mt-5">
                         <!-- Grid row -->
                         <div class="row">
                             <!-- Grid column -->

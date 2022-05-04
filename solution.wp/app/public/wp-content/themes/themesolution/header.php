@@ -34,7 +34,7 @@
          $slider = get_posts(array('post_type' => 'carrousel', 'showposts'   => -1)); ?>
 
         <!--container du slider-->
-        <div id="carouselDark" class="carousel carousel slide" data-bs-ride="carousel">
+        <div id="carouselDark" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -53,9 +53,9 @@
                         //si mon index est à 0, donc 1ere slide, il prendra la classe 'active' nécessaire à Bootstrap ?> " data-bs-interval="5000">
                             <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($slide->ID)) ?>" class="img-responsive"/>
                         </div>
-                        <?php $count++; ?>
+                        <?php $count++;
          
-                    <?php endforeach; ?>
+                    endforeach; ?>
             </div>
 
         </div>

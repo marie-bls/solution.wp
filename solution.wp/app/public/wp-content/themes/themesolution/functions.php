@@ -90,7 +90,6 @@ function solution_register_assets()
     wp_enqueue_script('jquery');
 
 
-
 }
     add_action('wp_enqueue_scripts', 'solution_register_assets');
 
@@ -98,10 +97,10 @@ function solution_register_assets()
 /**
  * Déclarer les short codes
  */
-add_action( 'init', 'register_shortcodes' );
-function register_shortcodes() { // lorsque ces codes seront trouvés, les fonctions seront appelées
-	add_shortcode( 'post_slick_carousel_slider', 'sc_post_slick_carousel_slider' );
-}
+// add_action( 'init', 'register_shortcodes' );
+// function register_shortcodes() { // lorsque ces codes seront trouvés, les fonctions seront appelées
+// 	add_shortcode( 'post_slick_carousel_slider', 'sc_post_slick_carousel_slider' );
+// }
 
 /**
  * "post_slick_carousel_slider" est une fonction de rappel de code court responsable de la sortie du balisage HTML des custom posts
@@ -290,6 +289,7 @@ function solutionSlider_register_post_types()
     $args = array(
         'labels' => $labels,
         'menu_icon' => 'dashicons-slides',
+        'supports' => array('title','thumbnail'),
         'public' => true, //dans le cas d'un thème la visibilité du CPT sera forcément publique pour être affiché
         'show_in_rest' => false,
         // Pour créer un CPT avec l’éditeur visuel Gutenberg, il faut ajouter le paramètre show_in_rest à true dans sa déclaration
