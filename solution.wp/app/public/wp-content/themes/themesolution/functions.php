@@ -26,36 +26,17 @@ add_action('init', 'solution_new_image');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support('title-tag');
 
-//--------------------------------------------------------------------
-// ------------------------intégrer Bootstrap-------------------------
-//--------------------------------------------------------------------
-
-function charger_bootstrap() {
-    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js'
-    ,array( 'jquery' ), null, true );
-
-    wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');    
-}
-    
-add_action('wp_enqueue_scripts', 'charger_bootstrap');
-
 
 //--------------------------------------------------------------------
 // ------------------------emplacements menus-------------------------
 //--------------------------------------------------------------------
-
-// Déclarer le menu Bootstrap 
-function solution_bootstrap_menu () { 
-    register_nav_menu ( 'bootstrap-menu' , __ ( 'Bootstrap 5 Menu' )) ;  
-  }
-  add_action ( 'init' , 'solution_bootstrap_menu' ) ; 
 
 
   // Déclarer un emplacement de menu
 register_nav_menus(array(
     'main' => 'Menu Principal', //un menu dans l'en-tête
     'footer' => 'Bas de page', //un en bas de page
-    'social-menu' => 'Réseaux sociaux'
+    'social-menu' => 'Réseaux sociaux',
 ));
 
 
@@ -68,12 +49,16 @@ register_nav_menus(array(
 
 function solution_register_assets()
 {
+
+    // Déclarer jQuery 
+    wp_enqueue_script('jquery');
+
      // Déclarer le JS
      wp_enqueue_script(
         'script', // 1er paramètre, le handle, généralement le nom du fichier (nom du thème)
         get_template_directory_uri() .'/script.js',
         array('jquery', 'bootstrap-js'), //ce tableau de dépendance permet de lister le handle des scripts qui devront être chargés avant
-        // le script js sera chargé après jquery et bootstrap-js
+        // le script js sera chargé après jquery et bootstrap-js (jQuery doit être chargé avant Bootstrap)
         time(),
         true // ce booléen indique que le script sera chargé en bas de page (si true) via le wp_footer )> meilleures perfo
     );
@@ -86,66 +71,47 @@ function solution_register_assets()
         time() //le versionning. Ici en dév, time() évite les soucis de cache, et le n° de version changera automatiquement
         );
 
-    // Déclarer jQuery 
-    wp_enqueue_script('jquery');
 
+    // enregistrement des google fonts
+    wp_enqueue_style('$fontstyle', 'https://fonts.googleapis.com/css2?family=Ultra&display=swap&family=Montserrat&display=swap', array(), null, 'all');
 
 }
     add_action('wp_enqueue_scripts', 'solution_register_assets');
 
-//-------------------------------------------SLICK CAROUSEL---------------------------------------------
-/**
- * Déclarer les short codes
- */
-// add_action( 'init', 'register_shortcodes' );
-// function register_shortcodes() { // lorsque ces codes seront trouvés, les fonctions seront appelées
-// 	add_shortcode( 'post_slick_carousel_slider', 'sc_post_slick_carousel_slider' );
-// }
+    
+    //pour éviter erreur dans jQuery "$ is not a function"
+    function typed_init() {
+        echo '<script>
+        jQuery(function($){
+                  $(".element").typed({
+                   strings: ["App Shah...", " an Engineer (MS)...","a WordPress Lover...", "a Java Developer..."],
+                   typeSpeed:100,
+                 backDelay:1000,
+                 loop:true
+        });
+         });</script>';
+    }
+    add_action('wp_footer', 'typed_init');
 
-/**
- * "post_slick_carousel_slider" est une fonction de rappel de code court responsable de la sortie du balisage HTML des custom posts
- */
-function sc_post_slick_carousel_slider ( $atts ) {
 
-  global $wp_query, $post;
 
-  $posts = new WP_Query( array(
-    'post_type' => 'carrousel', 
-    'post_status' => 'publish',  
-    'showposts'=> -1
-	) );
+//--------------------------------------------------------------------
+// ------------------------intégrer Bootstrap-------------------------
+//--------------------------------------------------------------------
 
-  if( ! $posts->have_posts() ) {
-		return false;
-  }
+function charger_bootstrap() {
+    
+    // wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js'
+    // , array('jquery'), null, true);
+    
+    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js'
+    ,array( 'jquery' ), null, true );
 
-  $output = '<div class="post-slick-carousel-slider">';
-
-  while( $posts->have_posts() ) {
-
-        $posts->the_post();	
-        $post_ID = get_the_ID();	
-        $post_image=wp_get_attachment_image( get_post_thumbnail_id( $post_ID ), 'landscape', false, '' );
-        //get_attachment image génèrera une img en HTML, elle a besoin de l'id en argument
-
-		$output .= '<div>';        
-		$output .= 		$post_image;
-		$output .= '</div>';		
-		// $posts->the_post();
-        // $post_title=get_the_title();
-        // $post_image = get_the_post_thumbnail( 'landscape');
- 
-
-		// $output .= '<div class ="carrousel-item">'; 
-        // $output .=      $post_title;	
-		// $output .=      '<img src ="'. $post_image.'"></img>' ;
-		// $output .= '</div>';
-	}
-
-    $output .= '</div>';
-
-  return $output;
+    wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');    
 }
+    
+add_action('wp_enqueue_scripts', 'charger_bootstrap');
+
 
 //---------------------------------------------------------------------
 // ----------------------Déclarer les CPT------------------------------
@@ -327,8 +293,7 @@ function solutionCarrousel_register_post_types()
 
     register_post_type('carrousel', $args);
 
-     // enregistrement des google fonts
-     wp_enqueue_style('$fontstyle', 'https://fonts.googleapis.com/css2?family=Ultra&display=swap&family=Montserrat&display=swap', array(), null, 'all');
+     
 }
 add_action('init', 'solutionCarrousel_register_post_types');
 

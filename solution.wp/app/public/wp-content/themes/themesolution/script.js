@@ -1,15 +1,6 @@
-// if(jQuery){
-//     alert("jQuery est chargé");
-//  }
-//  else{
-//     alert("jQuery n'est pas chargé");
-//  }
- 
-console.log('script');
-
-// $(document).ready(function() {
-// 	$('myCarousel').carousel({
-// 	interval: 5000
-// 	}) 
-// });
-
+jQuery(document).ready(function($){
+    $(".test-menu").click(function(){
+      $(".JQ").toggle();
+      console.log('test jQ');
+    });
+  });

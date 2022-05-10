@@ -25531,3 +25531,168 @@ Stack trace:
 [04-May-2022 09:45:32 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 319
 [04-May-2022 10:29:10 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 310
 [04-May-2022 12:52:55 UTC] PHP Parse error:  syntax error, unexpected ''</div></div>;	' (T_ENCAPSED_AND_WHITESPACE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 291
+[06-May-2022 14:51:17 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:88
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 88
+[06-May-2022 14:51:18 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:88
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\404.php(1): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 88
+[06-May-2022 14:51:22 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:88
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 88
+[06-May-2022 14:51:23 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:88
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\404.php(1): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 88
+[06-May-2022 14:51:52 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:84
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 84
+[08-May-2022 12:28:25 UTC] PHP Parse error:  syntax error, unexpected '>' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 283
+[08-May-2022 13:01:18 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:84
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 84
+[08-May-2022 13:03:18 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:84
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 84
+[08-May-2022 13:03:30 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:84
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 84
+[08-May-2022 13:03:57 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:85
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\archive-portfolio-item.php(1): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 85
+[09-May-2022 07:42:29 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:85
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 85
+[09-May-2022 07:42:31 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:85
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 85
+[09-May-2022 07:44:23 UTC] PHP Fatal error:  Uncaught Error: Class 'wp_bootstrap_navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:85
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 85
+[09-May-2022 12:11:58 UTC] PHP Fatal error:  Uncaught Error: Class 'bootstrap_5_wp_nav_menu_walker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:89
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 89
+[09-May-2022 15:32:25 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Bootstrap_Navwalker' not found in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php:88
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(770): require_once()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php(716): load_template('C:\\Users\\marie\\...', true, Array)
+#2 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php(4): get_header()
+#4 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\marie\\...')
+#5 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#6 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#7 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 88
+[09-May-2022 21:22:09 UTC] PHP Warning:  Use of undefined constant collapseWidthExample - assumed 'collapseWidthExample' (this will throw an Error in a future version of PHP) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\header.php on line 85
+[09-May-2022 21:22:09 UTC] PHP Stack trace:
+[09-May-2022 21:22:09 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[09-May-2022 21:22:09 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[09-May-2022 21:22:09 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[09-May-2022 21:22:09 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[09-May-2022 21:22:09 UTC] PHP   5. get_header() C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php:1
+[09-May-2022 21:22:09 UTC] PHP   6. locate_template() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php:48
+[09-May-2022 21:22:09 UTC] PHP   7. load_template() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php:716
+[09-May-2022 21:22:09 UTC] PHP   8. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php:770

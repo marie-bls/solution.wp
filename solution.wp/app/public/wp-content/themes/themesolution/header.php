@@ -64,18 +64,31 @@
 <!-------------------------------------- bouton buzzwatch ---------------------------------------------------------->
 
 <button type="button" class="btn btn-dark btn-buzz"><a href="https://www.buzzwatch.fr/" target="_blank">BUZZWATCH</a></button>
-<button type="button" class="btn btn-light btn-menu">MENU</button>
 
-<!-------------------------------------- MENUS SOCIAL + PRINCIPAL ---------------------------------------------------------->
 
-<?php wp_nav_menu(
-    array(
-        'theme_location' => 'main', //emplacement du menu enregistré dans functions wp_register_nav, le slug main correspond au menu principal-->
-        'container' => 'ul', // afin d'éviter d'avoir une div autour car WP ajoute tjs une div , j'enveloppe mon élément d'une ul
-        'menu_class' => 'site__header__menu', // classe CSS à utiliser pour l'élément ul 
-    )
-);
-?>
+<!-------------------------------------- NAVBAR ---------------------------------------------------------->
+
+
+<div class="drop">
+
+  <button class=" test-menu btn btn-light drop-toggle btn-menu" type="button">
+    MENU
+  </button>
+
+<div class="JQ "> 
+    <?php wp_nav_menu(
+        array(
+            'theme_location' => 'main', //emplacement du menu enregistré dans functions wp_register_nav, le slug main correspond au menu principal-->
+            'container' => 'ul', // afin d'éviter d'avoir une div autour car WP ajoute tjs une div , j'enveloppe mon élément d'une ul
+            'menu_class' => 'site__header__menu', // classe CSS à utiliser pour l'élément ul 
+        )
+    );
+    ?>
+</div>
+
+</div>
+
+<!-------------------------------------- MENUS SOCIAL ---------------------------------------------------------->
 
 <?php wp_nav_menu(
     array(
@@ -85,7 +98,6 @@
     )
 );
 ?>
-
 
 
     </header>
