@@ -25696,3 +25696,137 @@ Stack trace:
 [09-May-2022 21:22:09 UTC] PHP   6. locate_template() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\general-template.php:48
 [09-May-2022 21:22:09 UTC] PHP   7. load_template() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php:716
 [09-May-2022 21:22:09 UTC] PHP   8. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template.php:770
+[10-May-2022 18:18:01 UTC] PHP Warning:  Use of undefined constant SECURE_AUTH_KEY - assumed 'SECURE_AUTH_KEY' (this will throw an Error in a future version of PHP) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\freemius\includes\class-freemius.php on line 4061
+[10-May-2022 18:18:01 UTC] PHP Stack trace:
+[10-May-2022 18:18:01 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\plugins.php:0
+[10-May-2022 18:18:01 UTC] PHP   2. activate_plugin() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\plugins.php:58
+[10-May-2022 18:18:01 UTC] PHP   3. plugin_sandbox_scrape() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\includes\plugin.php:659
+[10-May-2022 18:18:01 UTC] PHP   4. include_once() C:\Users\marie\Documents\solution.wp\app\public\wp-admin\includes\plugin.php:2288
+[10-May-2022 18:18:01 UTC] PHP   5. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\anywhere-elementor.php:26
+[10-May-2022 18:18:01 UTC] PHP   6. wpv_ae() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\includes\pro.php:39
+[10-May-2022 18:18:01 UTC] PHP   7. fs_dynamic_init() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\includes\pro.php:13
+[10-May-2022 18:18:01 UTC] PHP   8. Freemius->dynamic_init() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\freemius\start.php:522
+[10-May-2022 18:18:01 UTC] PHP   9. Freemius->has_api_connectivity() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\freemius\includes\class-freemius.php:4818
+[10-May-2022 18:18:01 UTC] PHP  10. Freemius->ping() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\freemius\includes\class-freemius.php:3964
+[10-May-2022 18:18:01 UTC] PHP  11. Freemius->get_anonymous_id() C:\Users\marie\Documents\solution.wp\app\public\wp-content\plugins\anywhere-elementor\freemius\includes\class-freemius.php:3912
+[13-May-2022 08:58:50 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\front-page.php on line 49
+[16-May-2022 20:29:48 UTC] PHP Parse error:  syntax error, unexpected ':' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\search.php on line 15
+[16-May-2022 20:51:20 UTC] PHP Parse error:  syntax error, unexpected ':' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\search.php on line 15
+[18-May-2022 08:24:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php:15
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#2 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#3 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 15
+[18-May-2022 08:24:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php:15
+Stack trace:
+#0 C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php(19): require_once('C:\\Users\\marie\\...')
+#2 C:\Users\marie\Documents\solution.wp\app\public\index.php(17): require('C:\\Users\\marie\\...')
+#3 {main}
+  thrown in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 15
+[18-May-2022 08:42:07 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 10
+[18-May-2022 08:42:27 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 40
+[18-May-2022 08:42:27 UTC] PHP Stack trace:
+[18-May-2022 08:42:27 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:42:27 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:42:27 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:42:27 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:43:17 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 41
+[18-May-2022 08:43:17 UTC] PHP Stack trace:
+[18-May-2022 08:43:17 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:43:17 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:43:17 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:43:17 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:02 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 42
+[18-May-2022 08:45:02 UTC] PHP Stack trace:
+[18-May-2022 08:45:02 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:02 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:02 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:02 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 08:45:40 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\page.php on line 39
+[18-May-2022 08:45:40 UTC] PHP Stack trace:
+[18-May-2022 08:45:40 UTC] PHP   1. {main}() C:\Users\marie\Documents\solution.wp\app\public\index.php:0
+[18-May-2022 08:45:40 UTC] PHP   2. require() C:\Users\marie\Documents\solution.wp\app\public\index.php:17
+[18-May-2022 08:45:40 UTC] PHP   3. require_once() C:\Users\marie\Documents\solution.wp\app\public\wp-blog-header.php:19
+[18-May-2022 08:45:40 UTC] PHP   4. include() C:\Users\marie\Documents\solution.wp\app\public\wp-includes\template-loader.php:106
+[18-May-2022 09:08:33 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\single.php on line 12
+[18-May-2022 09:28:28 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\marie\Documents\solution.wp\app\public\wp-content\themes\themesolution\single.php on line 12
+[18-May-2022 14:50:49 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:49 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:52 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:52 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:52 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:52 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-May-2022 14:50:55 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:21 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:21 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:27 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:27 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:27 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:28 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-May-2022 14:40:30 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:29 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:29 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:38 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:38 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:38 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:38 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 07:44:40 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 14:24:47 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-May-2022 14:25:06 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1799 but version 1808 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0

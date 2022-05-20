@@ -71,11 +71,11 @@
 
 <div class="drop">
 
-  <button class=" test-menu btn btn-light drop-toggle btn-menu" type="button">
+  <button class="btn btn-light drop-toggle btn-menu">
     MENU
   </button>
 
-<div class="JQ "> 
+    <div class="nav-drop"> 
     <?php wp_nav_menu(
         array(
             'theme_location' => 'main', //emplacement du menu enregistré dans functions wp_register_nav, le slug main correspond au menu principal-->
@@ -84,20 +84,29 @@
         )
     );
     ?>
-</div>
+    </div>
 
 </div>
 
 <!-------------------------------------- MENUS SOCIAL ---------------------------------------------------------->
+<div class="nav-rs">
+    <div class="header-search">
+			<?php 
+            get_search_form(); 
+            ?>
+    </div>
 
-<?php wp_nav_menu(
-    array(
-        'theme_location' => 'social-menu',
-        'container' => 'ul', // afin d'éviter d'avoir une div autour car WP ajoute tjs une div , j'enveloppe mon élément d'une ul
-        'menu_class' => 'socialMenu', // classe CSS à utiliser pour l'élément ul 
-    )
-);
-?>
+    <div class="menu-rs">
+    <?php wp_nav_menu(
+        array(
+            'theme_location' => 'social-menu',
+            'container' => 'ul', // afin d'éviter d'avoir une div autour car WP ajoute tjs une div , j'enveloppe mon élément d'une ul
+            'menu_class' => 'socialMenu', // classe CSS à utiliser pour l'élément ul 
+        )
+    );
+    ?>
+    </div>
+</div>
 
 
     </header>

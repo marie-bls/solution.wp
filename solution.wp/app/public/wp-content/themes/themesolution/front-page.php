@@ -1,5 +1,4 @@
 <?php
-/*c'est ce fichier qui s'affichera lorsque la page d'accueil sera appelée */
 
 get_header(); ?>
 
@@ -28,7 +27,8 @@ get_header(); ?>
     <div class="portfolio">
         <?php if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
                 $count++; ?>
-                <div class="<?php echo ($count == 3 ? "col-12" : "col"); ?>">
+                <div class="<?php echo ($count == 3 ? "col-lg-12" : "col-lg"); ?>">
+                <a href="<?php the_permalink(); ?>" class="post__link">
                     <div class="image-portfolio">
                         <?php
                         if ($count == 3) {
@@ -43,6 +43,7 @@ get_header(); ?>
                         <h5 class="text-uppercase"><?php echo the_title() . " " . "/ "; ?></h5>
                         <p> <?php echo " " . the_excerpt(); ?></p>
                     </div>
+                </a>
                 </div>
 
         <?php endwhile;
@@ -165,7 +166,6 @@ get_header(); ?>
     <!----------------------- WP QUERY BLOC "Ce qui nous rend différents---------------------------------->
     <!--------------------------- CUSTOM POST TYPE "CARDS"------------------------------------------->
 
-
     <div class="diff">
         <h1>Ce qui nous rend (vraiment) différents</h1>
         <h4>Il existe plus de 18 000 agences de communication en France. Sans compter les dizaines de milliers de freelances.</h4>
@@ -200,7 +200,7 @@ get_header(); ?>
                     </div>
 
                     <div class="foot-card">
-                        <a class="btn btn-primary" href="<?php the_field('lien'); ?>"><?= the_field('texte_lien'); ?></a>
+                        <a class="btn btn-card btn-primary" href="<?php the_field('lien'); ?>"><?= the_field('texte_lien'); ?></a>
                     </div>
 
                 </div>

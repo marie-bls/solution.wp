@@ -1,29 +1,15 @@
-<!--cette page affiche un article -->
-
 <?php get_header(); ?>
-<h1>SINGLE</h1>
-  <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?> <!-- BOUCLE : charge la liste des articles -->
-       <!--vérifie s'il y a des articles-->
-    <article class="post">
-      <?php the_post_thumbnail(); ?>
 
-      <h1><?php the_title(); ?></h1>
+<h1>Single</h1>
 
-      <div class="post__meta">
-       
-        <p>
-          Publié le <?php the_date(); ?>
-          par <?php the_author(); ?>
-          Dans la catégorie <?php the_category(); ?> <!--cela générera des <ul><li>
-          Avec les étiquettes-->
-        <?php the_tags(); ?>
-        </p>
-      </div>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <div class="post__content">
-        <?php the_content(); ?>
-      </div>
-    </article>
+        <h1><?php the_title(); ?></h1>
+        <?php the_post_thumbnail('square');
+        the_content();
 
-  <?php endwhile; endif; ?>
+
+ endwhile;
+endif; ?>
+
 <?php get_footer(); ?>

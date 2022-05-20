@@ -1,6 +1,12 @@
 jQuery(document).ready(function($){
-    $(".test-menu").click(function(){
-      $(".JQ").toggle();
-      console.log('test jQ');
+    $(".btn-menu").click(function(){
+      $(".nav-drop").toggle();
+    });
+  });
+
+  /*fonction recherche*/
+  jQuery(document).ready(function($){
+    $("#searchsubmit").click(function(){
+      $("#s").removeClass("hidden");
     });
   });

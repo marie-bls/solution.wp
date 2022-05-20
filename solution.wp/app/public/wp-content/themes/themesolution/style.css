@@ -13,9 +13,33 @@ body{
     background-color: black !important;
     font-family: Montserrat, sans-serif !important;
     max-width: 1800px !important; /*pour limiter la largeur*/
-    margin : auto;
+    margin : auto !important;
 }
 
+p{
+    font-size: 1rem;
+}
+a{
+    text-decoration: none!important;
+}
+
+a:hover {
+    color: black !important;
+} 
+
+
+/*------------------------------------------------------------------------
+ --------------section qui encadre le corps du HTML ---------------------
+-------------------------------------------------------------------------*/
+
+
+section{
+    width: 1200px;
+    margin :auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*-----------------------------------------------------------------------
 ---------------------------- HEADER ----------------------------------
 ------------------------------------------------------------------------*/
@@ -47,6 +71,10 @@ body{
     color: white;
 }
 
+.btn-buzz a:hover{
+    color: white !important;
+}
+
 .btn-menu{
     position:absolute;
     top : 210px;
@@ -57,19 +85,59 @@ body{
 /*----------------------MENUS-------------------------------------------------
 ------------------------------------------------------------------------------*/
 
-.socialMenu{
+.nav-rs{
     position: absolute;
     right : 400px;
     top :50px;
+    display: flex;
 }
 
-.site__header__menu{
-    position:absolute;
-    top: 200px;
-    padding-right: 20px;
+/*Conseil Gabriel, car au départ dans le menu WP, j'avais mis en classe <i class="fa fa-lg fa-brands fa-facebook" aria-hidden="true"></i> -  enlever le iclass, mettre un :before en css sur la classe .facebook pour afficher l’icône (pseudo élément)*/
+
+.wp-icon a{
+    font-size:0px;
+    text-decoration: none;
 }
 
-.site__footer__menu, .socialMenu {
+.wp-icon a:before{
+    font-family: "fontawesome";
+    font-size:20px;
+}
+
+.wp-fa-facebook a:before{
+    content:"\f09a";
+}
+
+.wp-fa-contact a:before{
+    content : "\f0e0";
+}
+
+.wp-fa-insta a:before{
+    content : "\f16d";
+}
+
+.wp-fa-tiktok a:before{
+    content : "\e07b";
+}
+
+.wp-fa-youtube a:before{
+    content :"\f167"
+}
+
+.wp-fa-linkedin a:before{
+    content:"\f08c";
+}
+
+.wp-fa-search a:before{
+    content:"\f002";
+}
+
+
+.drop{
+    display: inline-block;
+}
+
+.site__footer__menu {
     list-style: none;
     margin:0;
     padding:0; /* pour annuler les paramètres par défaut de certains navigateurs*/
@@ -77,9 +145,15 @@ body{
 }
 
 
-.socialMenu li a{
-    padding: 10px;
-    color : white;
+.socialMenu li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color : white;    
+}
+
+.site__header__menu li a:hover{
+    background-color: white;
+    color:black ;
 }
 
 .site__header__menu li a, .contact_footer a, .leg a{
@@ -89,7 +163,7 @@ body{
 }
 
 .socialMenu li, .site__header__menu li{
-    display: inline-block;
+    display: inline;
 }
 
 /*-----------------------------------------------------------------------
@@ -104,18 +178,7 @@ margin: 0 10px !important;
 border-radius: 100% !important;
 background-color: white!important;
 }
-/*------------------------------------------------------------------------
- --------------section qui encadre le corps du HTML ---------------------
--------------------------------------------------------------------------*/
 
-
-section{
-    width: 1115px;
-    margin :auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /*------------------------------------------------------------------------
 /*----------------------------- CASE STUDY ------------------------------------
@@ -136,7 +199,6 @@ section{
 -------------------------------------------------------------------------*/
 
 .portfolio{
-    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -163,6 +225,14 @@ section{
 .titre-portfolio h5{
     font-weight: bold;
     display: flex;
+}
+
+.portfolio div a{
+    color: white;
+}
+
+.portfolio div a:hover{
+    color: white!important;
 }
 
 /*-------------------------------------------------------------------------
@@ -199,11 +269,11 @@ section{
 /*--------------------Le trait de séparation---------------------------------
 --------------------------------------------------------------------------*/
 hr{
-    height: 3px;
-    width: 100%;
-    opacity: 1;
-    margin-top : 40px;
-    margin-bottom: 80px;
+    height: 3px !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    margin-top : 40px !important;
+    margin-bottom: 50px !important;
 }
 
 /*-----------------------------------------------------------------------------
@@ -218,52 +288,30 @@ hr{
 
 .container{
     display: grid;
-
     margin: auto;
     row-gap: 70px;
+    column-gap:28px;
 }
+
 
 .content-atout div{
     display: flex;
     flex-direction: column;
     align-content: space-between;
 }
+.odd.content-atout div:nth-child(2){
+    align-items : flex-end;
+    justify-content: center;
+    flex:1;
+}
+
+.image-atout img {
+    flex: 1;
+}
 
 .even.content-atout .image-atout{
     order : -1;
 }
-
-/* 
-.content-atout{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.content-atout:first-child{
-    grid-area: atout1;
-}
-
-.content-atout:nth-child(2){
-    grid-area: atout2;
-}
-
-.content-atout:nth-child(3){
-    grid-area: atout3;
-}
-
-.odd.content-atout .txt-atout{
-    order :1;     
-}
-
-.odd.content-atout .image-atout{
-    order :2; 
-    margin: auto;
-}
-
-.even.content-atout .txt-atout{
-    order: 2
-} */
 
 
 .btn-atout{
@@ -299,7 +347,6 @@ hr{
 ------------------------------------------------------------------------------*/
 
 .diff{
-    padding: 20px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -331,19 +378,12 @@ hr{
     display: flex;
     justify-content: flex-start;
 }
-
-
-.btn-card{
-    width : 200px;
-    height: 60px;
-    background-color: orangered;
-    border :  none ;
-    color : black;
+.card-body{
+    padding-left : 0!important;
 }
 
 .foot-card{
     display: flex;   
-    /* justify-content: left; */
     align-items: center;
     justify-content: center;
     width : 250px;
@@ -351,14 +391,22 @@ hr{
 }
 
 
-.btn-primary{
-    border : 0;
-    border-radius: 0;
-    color : black;
+.btn-card{
+    border : 0 !important;
+    border-radius: 0 !important;
+    color : black !important;
     font-family: Montserrat, serif ;
-    font-weight: bold;
-    background-color: orange;
-    margin-left:16px ;
+    font-weight: bold!important;
+    background-color: orange !important;
+    margin-left:16px !important;
+    display: flex !important ;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.lien-actu h6 a:hover{
+    background-color: white;
+    color:black;
 }
 
 
@@ -412,23 +460,23 @@ hr{
 /*----------------------- SLIDER LOGOS CLIENTS ------------------------------------------------
 ------------------------------------------------------------------------------*/
 #CarouselClients{
-    display: flex;
-    justify-content: space-evenly;    
+    display: flex;   
     align-items: center;
     background-color: lightgrey;
-    width: 100%;
+    width: 100% !important;
     height : 150px;
     padding: 10px 100px 10px 100px ;
 }
+
 
 /*------------------------------------------------------------------------------
 /*----------------------- FOOTER ------------------------------------------------
 ------------------------------------------------------------------------------*/
 
 .footer{
-    background-color: grey;
+    background-color:#303030 ;
     padding: 20px 130px 20px 130px ;
-    width: 100%;
+    width: 100% !important;
 }
 
 #menu-footer {
@@ -461,19 +509,36 @@ hr{
     color: white;
 }
 
-.menu-contact{
-    font-size : 0;
-}
 
-.menu-contact:before{
-    content : "\f0e0"; /*font awesome*/
-    font-family :"fontawesome";
-    font-size:20px;
-}
-
-/*afficher le sous-menu au survol de l'élément parent uniquement sur les écrans supérieurs à égaux à 992px (ordinateurs)*/
-@media(min-width: 992px){
-    .dropdown:hover .dropdown-menu {
-          display: block;
+/*======================MEDIA QUERIES =======================*/
+@media screen and (max-width: 1056px) {
+    .portfolio{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
     }
+    .image-portfolio img{
+        width: 540px;
+    }
+}
+
+/*=======================le bouton recherche ===================================*/
+.form-search button{
+    background-color: transparent;
+    border: none;
+}
+.form-search input{
+    border: none;
+}
+
+.fa-search{
+    color: white;
+}
+
+.socialMenu{
+    padding-left :0rem;
+}
+
+.hidden{
+    visibility: hidden;
 }

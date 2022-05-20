@@ -10,9 +10,7 @@
                 <div class="">
                     <div class="container-footer text-center text-md-start mt-5">
                         <!-- Grid row -->
-                        <div class="row">
-                            <!-- Grid column -->
-                            
+                        <div class="row">                            
                             <!-- Grid column -->
                             <div class="nav_footer col-md-4 ">
                                 <!-- Links -->
