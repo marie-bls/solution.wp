@@ -19,7 +19,6 @@ Le but : développer un thème Wordpress sur-mesure à partir de la maquette Des
 - Modification du style à l'aide du CSS + Bootstrap
 - Création d'articles, de custom posts, et ACF
 - Installation de plug-in
-- Récupération d'une partie du site existant hébergé sur OVH via le protocole FTP grâce à FileZilla.
 
 ### Moyens utilisés
 
